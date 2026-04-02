@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "КОНФЕРЕНЦИЯ БГ — Професионално техническо обезпечаване",
   description:
     "Konferencia.BG предлага професионално техническо обезпечаване на конференции, конгреси, работни срещи и симпозиуми — озвучаване, симултанен превод, мултимедия и още.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

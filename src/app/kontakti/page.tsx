@@ -40,8 +40,25 @@ const contactCards = [
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = String(formData.get("name") ?? "").trim();
+    const phone = String(formData.get("phone") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+
+    const subject = "Запитване от Konferencia.bg";
+    const body = [
+      `Име: ${name}`,
+      `Телефон: ${phone || "-"}`,
+      `E-mail: ${email}`,
+      "",
+      "Съобщение:",
+      message,
+    ].join("\n");
+
+    window.location.href = `mailto:office@konferencia.bg?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   }
 
