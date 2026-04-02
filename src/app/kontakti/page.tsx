@@ -39,6 +39,17 @@ const contactCards = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [copiedCard, setCopiedCard] = useState<"email" | "phone" | null>(null);
+
+  async function handleCopy(value: string, type: "email" | "phone") {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopiedCard(type);
+      window.setTimeout(() => setCopiedCard(null), 2000);
+    } catch {
+      setCopiedCard(null);
+    }
+  }
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -76,19 +87,44 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-3 gap-6 mb-16">
             {contactCards.map((card, i) => (
-              <a
-                key={i}
-                href={card.href}
-                target={card.href.startsWith("http") ? "_blank" : undefined}
-                rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex flex-col items-center text-center bg-gray-section border border-gray-200 rounded-xl p-8 hover:shadow-lg hover:border-red/50 transition-all duration-300 group"
-              >
-                <div className="text-red mb-4 group-hover:scale-110 transition-transform">
-                  {card.icon}
-                </div>
-                <h3 className="text-dark font-bold text-lg mb-1">{card.label}</h3>
-                <p className="text-gray-600 group-hover:text-red transition-colors">{card.value}</p>
-              </a>
+              card.label === "E-mail" || card.label === "Телефон:" ? (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() =>
+                    handleCopy(
+                      card.label === "E-mail" ? "office@konferencia.bg" : "0886 401 306",
+                      card.label === "E-mail" ? "email" : "phone"
+                    )
+                  }
+                  className="w-full flex flex-col items-center text-center bg-gray-section border border-gray-200 rounded-xl p-8 hover:shadow-lg hover:border-red/50 transition-all duration-300 group"
+                >
+                  <div className="text-red mb-4 group-hover:scale-110 transition-transform">
+                    {card.icon}
+                  </div>
+                  <h3 className="text-dark font-bold text-lg mb-1">{card.label}</h3>
+                  <p className="text-gray-600 group-hover:text-red transition-colors">
+                    {(card.label === "E-mail" && copiedCard === "email") ||
+                    (card.label === "Телефон:" && copiedCard === "phone")
+                      ? "Copied!"
+                      : card.value}
+                  </p>
+                </button>
+              ) : (
+                <a
+                  key={i}
+                  href={card.href}
+                  target={card.href.startsWith("http") ? "_blank" : undefined}
+                  rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="flex flex-col items-center text-center bg-gray-section border border-gray-200 rounded-xl p-8 hover:shadow-lg hover:border-red/50 transition-all duration-300 group"
+                >
+                  <div className="text-red mb-4 group-hover:scale-110 transition-transform">
+                    {card.icon}
+                  </div>
+                  <h3 className="text-dark font-bold text-lg mb-1">{card.label}</h3>
+                  <p className="text-gray-600 group-hover:text-red transition-colors">{card.value}</p>
+                </a>
+              )
             ))}
           </div>
 
