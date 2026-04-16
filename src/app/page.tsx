@@ -49,6 +49,7 @@ export default function HomePage() {
           src="/header1.jpg"
           alt="Конференция БГ — техническо обезпечаване"
           fill
+          sizes="100vw"
           className="object-cover object-center"
           priority
         />
@@ -93,6 +94,7 @@ export default function HomePage() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
@@ -144,6 +146,7 @@ export default function HomePage() {
           src="/header3.jpg"
           alt="Конференция"
           fill
+          sizes="100vw"
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/60" />

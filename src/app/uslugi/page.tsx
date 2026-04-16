@@ -25,6 +25,7 @@ export default function ServicesPage() {
           src="/header7.jpg"
           alt="Услуги"
           fill
+          sizes="100vw"
           className="object-cover object-center"
           priority
         />
@@ -49,6 +50,7 @@ export default function ServicesPage() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
