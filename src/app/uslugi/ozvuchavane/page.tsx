@@ -3,8 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Озвучаване — КОНФЕРЕНЦИЯ БГ",
-  description: "Професионални озвучителни системи, дискусионни и безжични микрофони, аудио миксери за всякакъв тип събития.",
+  title: "Озвучаване на конференции и събития",
+  description: "Професионални озвучителни системи, дискусионни и безжични микрофони, аудио миксери за конференции, конгреси и корпоративни събития от Konferencia.BG.",
+  alternates: { canonical: "https://konferencia.bg/uslugi/ozvuchavane" },
+  openGraph: {
+    url: "https://konferencia.bg/uslugi/ozvuchavane",
+    title: "Озвучаване на конференции | Konferencia.BG",
+    description: "Ozvuchitelni sistemi, diskusionni i bezhichni mikrofoni, audio mikseri za konferentsii.",
+    images: [{ url: "/img2.1.jpg", width: 1200, height: 900, alt: "Озвучителни тела за конференции" }],
+  },
 };
 
 const sections = [

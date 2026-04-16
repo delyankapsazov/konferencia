@@ -3,8 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Запис и стрийминг — КОНФЕРЕНЦИЯ БГ",
-  description: "Аудио и видео запис на събития, както и предаване на живо до широк кръг от хора в цял свят.",
+  title: "Запис и стрийминг на конференции и събития",
+  description: "Аудио и видео запис на конференции и корпоративни събития, предаване на живо (livestreaming) до широк кръг от хора в цял свят от Konferencia.BG.",
+  alternates: { canonical: "https://konferencia.bg/uslugi/zapis-i-striyming" },
+  openGraph: {
+    url: "https://konferencia.bg/uslugi/zapis-i-striyming",
+    title: "Запис и стрийминг на конференции | Konferencia.BG",
+    description: "Audio i video zapis na sabitiya i livestreaming do shirok krag ot hora v tsyal svyat.",
+  },
 };
 
 const sections = [

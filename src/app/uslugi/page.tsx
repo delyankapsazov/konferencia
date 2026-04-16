@@ -3,8 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Услуги — КОНФЕРЕНЦИЯ БГ",
-  description: "Пълен набор от услуги за техническо обезпечаване — озвучаване, симултанен превод, мултимедия, осветление, тур гайд и стрийминг.",
+  title: "Услуги за техническо обезпечаване на конференции",
+  description: "Пълен набор от услуги за техническо обезпечаване — озвучаване, симултанен превод, мултимедия, осветление, тур гайд система и стрийминг за всякакъв тип събития.",
+  alternates: { canonical: "https://konferencia.bg/uslugi" },
+  openGraph: {
+    url: "https://konferencia.bg/uslugi",
+    title: "Услуги за техническо обезпечаване | Konferencia.BG",
+    description: "Ozvuchavane, simultanen prevod, multimediya, osvetlenie, tur gayd i striyming.",
+  },
 };
 
 const services = [

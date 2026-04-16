@@ -3,8 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Мултимедия — КОНФЕРЕНЦИЯ БГ",
-  description: "DLP проектори с висока резолюция, прожекционни екрани и професионален софтуер за визуални решения.",
+  title: "Мултимедия за конференции — проектори и екрани",
+  description: "DLP проектори с висока резолюция, прожекционни екрани и професионален софтуер за визуални решения. Видео мапинг и картина в картина за конгреси и корпоративни събития.",
+  alternates: { canonical: "https://konferencia.bg/uslugi/multimediya" },
+  openGraph: {
+    url: "https://konferencia.bg/uslugi/multimediya",
+    title: "Мултимедия за конференции | Konferencia.BG",
+    description: "DLP proektori, prozhektsionni ekrani i profesionalen softuer za vizualni resheniya na konferentsii.",
+    images: [{ url: "/img4.2.jpg", width: 1200, height: 900, alt: "Мултимедиен проектор за конференция" }],
+  },
 };
 
 const sections = [

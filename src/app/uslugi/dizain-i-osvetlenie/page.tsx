@@ -3,8 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Дизайн и осветление — КОНФЕРЕНЦИЯ БГ",
-  description: "Сценичен дизайн, изработка на гърбове на сцени и ефектно интелигентно осветление за модерна визия.",
+  title: "Дизайн и осветление за конференции и сцени",
+  description: "Сценичен дизайн, изработка на гърбове на сцени и ефектно интелигентно осветление за модерна визия на конференции и корпоративни събития от Konferencia.BG.",
+  alternates: { canonical: "https://konferencia.bg/uslugi/dizain-i-osvetlenie" },
+  openGraph: {
+    url: "https://konferencia.bg/uslugi/dizain-i-osvetlenie",
+    title: "Дизайн и осветление за конференции | Konferencia.BG",
+    description: "Stsenichen dizayn, garb na stseni i inteligentno osvetlenie za sabitiya i konferentsii.",
+  },
 };
 
 const sections = [

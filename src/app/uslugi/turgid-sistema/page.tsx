@@ -3,8 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Тур гайд система — КОНФЕРЕНЦИЯ БГ",
-  description: "Удобна и лека, многоканална тур гайд система с широк обхват. Живот на батериите до 20 часа.",
+  title: "Тур гайд система за конференции и екскурзии",
+  description: "Удобна и лека многоканална тур гайд система с широк обхват и живот на батериите до 20 часа. Подходяща за конференции, обиколки и образователни мероприятия.",
+  alternates: { canonical: "https://konferencia.bg/uslugi/turgid-sistema" },
+  openGraph: {
+    url: "https://konferencia.bg/uslugi/turgid-sistema",
+    title: "Тур гайд система | Konferencia.BG",
+    description: "Mnogokanalna tur gayd sistema s shirok obhvat i zhivot na bateriite do 20 chasa.",
+  },
 };
 
 const sidebar = [

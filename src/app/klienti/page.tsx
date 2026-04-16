@@ -3,8 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Клиенти — КОНФЕРЕНЦИЯ БГ",
-  description: "Нашите доверени клиенти и партньори. Конференция БГ работи с водещи организации и компании.",
+  title: "Наши клиенти — Konferencia.BG",
+  description: "Konferencia.BG работи с над 30 водещи организации и компании в България — МОСВ, Erasmus+, Friedrich Ebert Stiftung, OLAF и много други.",
+  alternates: { canonical: "https://konferencia.bg/klienti" },
+  openGraph: {
+    url: "https://konferencia.bg/klienti",
+    title: "Клиенти на Konferencia.BG",
+    description: "Nad 30 vodeshti organizatsii i kompanii — MOSV, Erasmus+, Friedrich Ebert Stiftung, OLAF i drugi.",
+  },
 };
 
 const clients = [

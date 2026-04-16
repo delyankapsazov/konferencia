@@ -3,8 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Симултанен превод — КОНФЕРЕНЦИЯ БГ",
-  description: "Професионални цифрови системи за симултанен превод Bosch и Sennheiser с перфектно качество на звука.",
+  title: "Симултанен превод — оборудване за конференции",
+  description: "Професионални цифрови системи за симултанен превод Bosch и Sennheiser с перфектно качество на звука. Кабини с вградена звукоизолация за международни събития.",
+  alternates: { canonical: "https://konferencia.bg/uslugi/simultanen-prevod" },
+  openGraph: {
+    url: "https://konferencia.bg/uslugi/simultanen-prevod",
+    title: "Симултанен превод за конференции | Konferencia.BG",
+    description: "Tsifrovi sistemi za simultanen prevod Bosch i Sennheiser. Kabini s zvukoizolatsiya za mezhdunarodni sabitiya.",
+    images: [{ url: "/img3.1-min.jpg", width: 1200, height: 900, alt: "Система за симултанен превод" }],
+  },
 };
 
 const sections = [

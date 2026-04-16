@@ -3,8 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "За нас — КОНФЕРЕНЦИЯ БГ",
-  description: "Научете повече за Konferencia.BG — професионално техническо обезпечаване на конференции и конгресни мероприятия.",
+  title: "За нас — Konferencia.BG",
+  description: "Konferencia.BG е компания за професионално техническо обезпечаване на конференции, конгреси, работни срещи и симпозиуми. Разполагаме с дългогодишен опит и професионално оборудване.",
+  alternates: { canonical: "https://konferencia.bg/za-nas" },
+  openGraph: {
+    url: "https://konferencia.bg/za-nas",
+    title: "За нас | Konferencia.BG",
+    description: "Kompaniya za tehnichesko obezpechavane na konferentsii s dalgogodishen opit.",
+  },
 };
 
 const sidebar = [
