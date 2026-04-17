@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { title: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane", image: "/blurb01.jpg" },
-  { title: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya", image: "/blurb03.jpg" },
-  { title: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema", image: "/blurb001.jpg" },
-  { title: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod", image: "/blurb02.jpg" },
-  { title: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie", image: "/blurb04.jpg" },
-  { title: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming", image: "/blurb06.jpg" },
+  { title: "ОЗВУЧАВАНЕ", href: "/озвучаване", image: "/blurb01.jpg" },
+  { title: "МУЛТИМЕДИЯ", href: "/мултимедия", image: "/blurb03.jpg" },
+  { title: "ТУР ГАЙД СИСТЕМА", href: "/тур-гайд-система", image: "/blurb001.jpg" },
+  { title: "СИМУЛТАНЕН ПРЕВОД", href: "/симултанен-превод", image: "/blurb02.jpg" },
+  { title: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/дизайн-и-осветление", image: "/blurb04.jpg" },
+  { title: "ЗАПИС И СТРИЙМИНГ", href: "/запис-и-стрийминг", image: "/blurb06.jpg" },
 ];
 
 const features = [

@@ -5,28 +5,26 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Тур гайд система за конференции и екскурзии",
   description: "Удобна и лека многоканална тур гайд система с широк обхват и живот на батериите до 20 часа. Подходяща за конференции, обиколки и образователни мероприятия.",
-  alternates: { canonical: "https://konferencia.bg/uslugi/turgid-sistema" },
   openGraph: {
-    url: "https://konferencia.bg/uslugi/turgid-sistema",
     title: "Тур гайд система | Konferencia.BG",
     description: "Mnogokanalna tur gayd sistema s shirok obhvat i zhivot na bateriite do 20 chasa.",
   },
 };
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "ОЗВУЧАВАНЕ", href: "/озвучаване" },
+  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/симултанен-превод" },
+  { name: "МУЛТИМЕДИЯ", href: "/мултимедия" },
+  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/дизайн-и-осветление" },
+  { name: "ТУР ГАЙД СИСТЕМА", href: "/тур-гайд-система" },
+  { name: "ЗАПИС И СТРИЙМИНГ", href: "/запис-и-стрийминг" },
 ];
 
 export default function TurgidSistemaPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header001.jpg" alt="Тур гайд система" fill className="object-cover object-center" priority />
+        <Image src="/header001.jpg" alt="Тур гайд система" fill sizes="100vw" className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">ТУР ГАЙД СИСТЕМА</h1>
@@ -41,7 +39,7 @@ export default function TurgidSistemaPage() {
             <div className="lg:flex-1">
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <div className="md:w-1/2 relative aspect-[4/3] w-full shadow-[0_0_7px_0_rgba(0,0,0,0.5)] overflow-hidden">
-                  <Image src="/img6.1.jpg" alt="Тур гайд система" fill className="object-cover" />
+                  <Image src="/img6.1.jpg" alt="Тур гайд система" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                 </div>
                 <div className="md:w-1/2">
                   <h3 className="text-2xl font-bold text-dark mb-4 uppercase">

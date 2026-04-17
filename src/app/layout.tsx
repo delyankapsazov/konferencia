@@ -112,7 +112,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="bg" className="h-full antialiased">
+    <html lang="bg" className="h-full antialiased" data-scroll-behavior="smooth">
       <head>
         <script
           type="application/ld+json"
