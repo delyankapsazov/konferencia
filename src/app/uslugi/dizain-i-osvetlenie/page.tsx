@@ -5,9 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Дизайн и осветление за конференции и сцени",
   description: "Сценичен дизайн, изработка на гърбове на сцени и ефектно интелигентно осветление за модерна визия на конференции и корпоративни събития от Konferencia.BG.",
-  alternates: { canonical: "https://konferencia.bg/uslugi/dizain-i-osvetlenie" },
   openGraph: {
-    url: "https://konferencia.bg/uslugi/dizain-i-osvetlenie",
     title: "Дизайн и осветление за конференции | Konferencia.BG",
     description: "Stsenichen dizayn, garb na stseni i inteligentno osvetlenie za sabitiya i konferentsii.",
   },
@@ -27,19 +25,19 @@ const sections = [
 ];
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "ОЗВУЧАВАНЕ", href: "/озвучаване" },
+  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/симултанен-превод" },
+  { name: "МУЛТИМЕДИЯ", href: "/мултимедия" },
+  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/дизайн-и-осветление" },
+  { name: "ТУР ГАЙД СИСТЕМА", href: "/тур-гайд-система" },
+  { name: "ЗАПИС И СТРИЙМИНГ", href: "/запис-и-стрийминг" },
 ];
 
 export default function DizainIOsvetleniePage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header4.jpg" alt="Дизайн и осветление" fill className="object-cover object-center" priority />
+        <Image src="/header4.jpg" alt="Дизайн и осветление" fill sizes="100vw" className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">ДИЗАЙН И ОСВЕТЛЕНИЕ</h1>
@@ -59,7 +57,7 @@ export default function DizainIOsvetleniePage() {
                     className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-center`}
                   >
                     <div className="md:w-1/2 relative aspect-[4/3] w-full shadow-[0_0_7px_0_rgba(0,0,0,0.5)] overflow-hidden">
-                      <Image src={section.image} alt={section.title} fill className="object-cover" />
+                      <Image src={section.image} alt={section.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                     </div>
                     <div className="md:w-1/2">
                       <h3 className="text-2xl font-bold text-dark mb-4 uppercase">

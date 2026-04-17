@@ -5,9 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Озвучаване на конференции и събития",
   description: "Професионални озвучителни системи, дискусионни и безжични микрофони, аудио миксери за конференции, конгреси и корпоративни събития от Konferencia.BG.",
-  alternates: { canonical: "https://konferencia.bg/uslugi/ozvuchavane" },
   openGraph: {
-    url: "https://konferencia.bg/uslugi/ozvuchavane",
     title: "Озвучаване на конференции | Konferencia.BG",
     description: "Ozvuchitelni sistemi, diskusionni i bezhichni mikrofoni, audio mikseri za konferentsii.",
     images: [{ url: "/img2.1.jpg", width: 1200, height: 900, alt: "Озвучителни тела за конференции" }],
@@ -42,19 +40,19 @@ const sections = [
 ];
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "ОЗВУЧАВАНЕ", href: "/озвучаване" },
+  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/симултанен-превод" },
+  { name: "МУЛТИМЕДИЯ", href: "/мултимедия" },
+  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/дизайн-и-осветление" },
+  { name: "ТУР ГАЙД СИСТЕМА", href: "/тур-гайд-система" },
+  { name: "ЗАПИС И СТРИЙМИНГ", href: "/запис-и-стрийминг" },
 ];
 
 export default function OzvuchavanePage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header1.jpg" alt="Озвучаване" fill className="object-cover object-center" priority />
+        <Image src="/header1.jpg" alt="Озвучаване" fill sizes="100vw" className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">ОЗВУЧАВАНЕ</h1>
@@ -78,6 +76,7 @@ export default function OzvuchavanePage() {
                         src={section.image}
                         alt={section.title}
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                       />
                     </div>

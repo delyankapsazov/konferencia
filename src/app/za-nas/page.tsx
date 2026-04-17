@@ -5,21 +5,19 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "За нас — Konferencia.BG",
   description: "Konferencia.BG е компания за професионално техническо обезпечаване на конференции, конгреси, работни срещи и симпозиуми. Разполагаме с дългогодишен опит и професионално оборудване.",
-  alternates: { canonical: "https://konferencia.bg/za-nas" },
   openGraph: {
-    url: "https://konferencia.bg/za-nas",
     title: "За нас | Konferencia.BG",
     description: "Kompaniya za tehnichesko obezpechavane na konferentsii s dalgogodishen opit.",
   },
 };
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "ОЗВУЧАВАНЕ", href: "/озвучаване" },
+  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/симултанен-превод" },
+  { name: "МУЛТИМЕДИЯ", href: "/мултимедия" },
+  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/дизайн-и-осветление" },
+  { name: "ТУР ГАЙД СИСТЕМА", href: "/тур-гайд-система" },
+  { name: "ЗАПИС И СТРИЙМИНГ", href: "/запис-и-стрийминг" },
 ];
 
 export default function AboutPage() {
@@ -31,6 +29,7 @@ export default function AboutPage() {
           src="/header8.jpg"
           alt="За нас"
           fill
+          sizes="100vw"
           className="object-cover object-center"
           priority
         />
@@ -68,6 +67,7 @@ export default function AboutPage() {
                   src="/about-img.jpg"
                   alt="Конференция БГ"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 75vw"
                   className="object-cover"
                 />
               </div>

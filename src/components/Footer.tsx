@@ -5,10 +5,10 @@ import { usePathname } from "next/navigation";
 
 const footerLinks = [
   { name: "НАЧАЛО", href: "/" },
-  { name: "ЗА НАС", href: "/za-nas" },
-  { name: "УСЛУГИ", href: "/uslugi" },
-  { name: "КЛИЕНТИ", href: "/klienti" },
-  { name: "КОНТАКТИ", href: "/kontakti" },
+  { name: "ЗА НАС", href: "/за-нас" },
+  { name: "УСЛУГИ", href: "/услуги" },
+  { name: "КЛИЕНТИ", href: "/клиенти" },
+  { name: "КОНТАКТИ", href: "/контакти" },
 ];
 
 export default function Footer() {

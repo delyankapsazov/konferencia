@@ -5,9 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Симултанен превод — оборудване за конференции",
   description: "Професионални цифрови системи за симултанен превод Bosch и Sennheiser с перфектно качество на звука. Кабини с вградена звукоизолация за международни събития.",
-  alternates: { canonical: "https://konferencia.bg/uslugi/simultanen-prevod" },
   openGraph: {
-    url: "https://konferencia.bg/uslugi/simultanen-prevod",
     title: "Симултанен превод за конференции | Konferencia.BG",
     description: "Tsifrovi sistemi za simultanen prevod Bosch i Sennheiser. Kabini s zvukoizolatsiya za mezhdunarodni sabitiya.",
     images: [{ url: "/img3.1-min.jpg", width: 1200, height: 900, alt: "Система за симултанен превод" }],
@@ -30,19 +28,19 @@ const sections = [
 ];
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "ОЗВУЧАВАНЕ", href: "/озвучаване" },
+  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/симултанен-превод" },
+  { name: "МУЛТИМЕДИЯ", href: "/мултимедия" },
+  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/дизайн-и-осветление" },
+  { name: "ТУР ГАЙД СИСТЕМА", href: "/тур-гайд-система" },
+  { name: "ЗАПИС И СТРИЙМИНГ", href: "/запис-и-стрийминг" },
 ];
 
 export default function SimultanenPrevodPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header2-min.jpg" alt="Симултанен превод" fill className="object-cover object-center" priority />
+        <Image src="/header2-min.jpg" alt="Симултанен превод" fill sizes="100vw" className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">СИМУЛТАНЕН ПРЕВОД</h1>
@@ -71,6 +69,7 @@ export default function SimultanenPrevodPage() {
                         src={section.image}
                         alt={section.title}
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                       />
                     </div>

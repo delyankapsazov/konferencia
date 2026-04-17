@@ -5,9 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Наши клиенти — Konferencia.BG",
   description: "Konferencia.BG работи с над 30 водещи организации и компании в България — МОСВ, Erasmus+, Friedrich Ebert Stiftung, OLAF и много други.",
-  alternates: { canonical: "https://konferencia.bg/klienti" },
   openGraph: {
-    url: "https://konferencia.bg/klienti",
     title: "Клиенти на Konferencia.BG",
     description: "Nad 30 vodeshti organizatsii i kompanii — MOSV, Erasmus+, Friedrich Ebert Stiftung, OLAF i drugi.",
   },
@@ -47,12 +45,12 @@ const clients = [
 ];
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "ОЗВУЧАВАНЕ", href: "/озвучаване" },
+  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/симултанен-превод" },
+  { name: "МУЛТИМЕДИЯ", href: "/мултимедия" },
+  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/дизайн-и-осветление" },
+  { name: "ТУР ГАЙД СИСТЕМА", href: "/тур-гайд-система" },
+  { name: "ЗАПИС И СТРИЙМИНГ", href: "/запис-и-стрийминг" },
 ];
 
 export default function ClientsPage() {
@@ -91,6 +89,7 @@ export default function ClientsPage() {
                         src={`/clients/${client.file}`}
                         alt={client.alt}
                         fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                         className="object-contain"
                       />
                     </div>

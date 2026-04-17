@@ -5,9 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Мултимедия за конференции — проектори и екрани",
   description: "DLP проектори с висока резолюция, прожекционни екрани и професионален софтуер за визуални решения. Видео мапинг и картина в картина за конгреси и корпоративни събития.",
-  alternates: { canonical: "https://konferencia.bg/uslugi/multimediya" },
   openGraph: {
-    url: "https://konferencia.bg/uslugi/multimediya",
     title: "Мултимедия за конференции | Konferencia.BG",
     description: "DLP proektori, prozhektsionni ekrani i profesionalen softuer za vizualni resheniya na konferentsii.",
     images: [{ url: "/img4.2.jpg", width: 1200, height: 900, alt: "Мултимедиен проектор за конференция" }],
@@ -36,19 +34,19 @@ const sections = [
 ];
 
 const sidebar = [
-  { name: "ОЗВУЧАВАНЕ", href: "/uslugi/ozvuchavane" },
-  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/uslugi/simultanen-prevod" },
-  { name: "МУЛТИМЕДИЯ", href: "/uslugi/multimediya" },
-  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/uslugi/dizain-i-osvetlenie" },
-  { name: "ТУР ГАЙД СИСТЕМА", href: "/uslugi/turgid-sistema" },
-  { name: "ЗАПИС И СТРИЙМИНГ", href: "/uslugi/zapis-i-striyming" },
+  { name: "ОЗВУЧАВАНЕ", href: "/озвучаване" },
+  { name: "СИМУЛТАНЕН ПРЕВОД", href: "/симултанен-превод" },
+  { name: "МУЛТИМЕДИЯ", href: "/мултимедия" },
+  { name: "ДИЗАЙН И ОСВЕТЛЕНИЕ", href: "/дизайн-и-осветление" },
+  { name: "ТУР ГАЙД СИСТЕМА", href: "/тур-гайд-система" },
+  { name: "ЗАПИС И СТРИЙМИНГ", href: "/запис-и-стрийминг" },
 ];
 
 export default function MultimediyaPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Image src="/header3.jpg" alt="Мултимедия" fill className="object-cover object-center" priority />
+        <Image src="/header3.jpg" alt="Мултимедия" fill sizes="100vw" className="object-cover object-center" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <h1 className="text-3xl sm:text-4xl font-bold text-white uppercase">МУЛТИМЕДИЯ</h1>
@@ -72,6 +70,7 @@ export default function MultimediyaPage() {
                         src={section.image}
                         alt={section.title}
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                       />
                     </div>
